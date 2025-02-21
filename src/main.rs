@@ -269,7 +269,7 @@ const QUERY: &str = "
 async fn main() -> Result<(), Error> {
     let mut latest: u32 = retrieve_latest();
     
-    let al_token = env::var("al_token").expect("al_token not found");
+    let al_token = env::var("AL_TOKEN").expect("AL_TOKEN not found");
 
     let json = json!({"query": QUERY});
 

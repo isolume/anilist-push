@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["isolume <nerd@isolu.me>"]
 license = "MIT"
 repository = "https://github.com/isolume/anilist-push"
+description = "Simple CLI application to fetch AniList notifications and send them over Pushover."
 
 [dependencies]
 reqwest = { version = "0.12.12", features = ["json"] }
