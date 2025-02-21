@@ -309,8 +309,6 @@ async fn main() -> Result<(), Error> {
                                       notification["contexts"][2].as_str().unwrap_or(" ?")
                 );
                 notify(title, &message, notification["media"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "FOLLOWING" => {
                 let title = "New Follower";
@@ -319,8 +317,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, None).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "ACTIVITY_MESSAGE" => {
                 let title = "New Message";
@@ -329,8 +325,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["message"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "ACTIVITY_MENTION" => {
                 let title = "New Mention";
@@ -339,8 +333,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["activity"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "ACTIVITY_REPLY" | "ACTIVITY_REPLY_SUBSCRIBED" => {
                 let title = "New Reply";
@@ -349,8 +341,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["activity"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "ACTIVITY_LIKE" | "ACTIVITY_REPLY_LIKE" => {
                 let title = "New Like";
@@ -359,8 +349,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["activity"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "THREAD_COMMENT_MENTION" => {
                 let title = "New Mention";
@@ -369,8 +357,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["comment"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "THREAD_COMMENT_REPLY" | "THREAD_COMMENT_SUBSCRIBED" => {
                 let title = "New Reply";
@@ -379,8 +365,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["comment"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "THREAD_COMMENT_LIKE" | "THREAD_LIKE" => {
                 let title = "New Like";
@@ -389,8 +373,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["comment"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "RELATED_MEDIA_ADDITION" => {
                 let title = "New Related Media";
@@ -399,8 +381,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["media"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "MEDIA_DATA_CHANGE" => {
                 let title = "New Data Change";
@@ -409,8 +389,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["media"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "MEDIA_MERGE" => {
                 let title = "New Media Merge";
@@ -419,8 +397,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["media"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             "MEDIA_DELETION" => {
                 let title = "New Media Deletion";
@@ -429,8 +405,6 @@ async fn main() -> Result<(), Error> {
                                       notification["context"].as_str().unwrap_or("?")
                 );
                 notify(title, &message, notification["media"]["siteUrl"].as_str()).await?;
-                // println!("Title: {}", title);
-                // println!("Message: {}", message);
             }
             _ => {}
         }
