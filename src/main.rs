@@ -291,7 +291,7 @@ async fn main() -> Result<(), Error> {
         let id = notification["id"].as_u64().expect("expected a notification id") as u32;
 
         if latest > id {
-            break
+            continue
         }
 
         latest = id;
