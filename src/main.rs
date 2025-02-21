@@ -1,4 +1,3 @@
-use dotenvy::dotenv;
 use std::{env, fs};
 
 use reqwest::Client;
@@ -269,7 +268,6 @@ const QUERY: &str = "
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     let mut latest: u32 = retrieve_latest();
-    dotenv().expect(".env file not found");
     
     let al_token = env::var("al_token").expect("al_token not found");
 
