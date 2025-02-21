@@ -290,7 +290,7 @@ async fn main() -> Result<(), Error> {
     for notification in result["data"]["page"]["notifications"].as_array().unwrap().iter().rev() {
         let id = notification["id"].as_u64().expect("expected a notification id") as u32;
 
-        if latest > id {
+        if latest >= id {
             continue
         }
 
