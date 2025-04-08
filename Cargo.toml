@@ -1,6 +1,6 @@
 [package]
 name = "anilist-push"
-version = "1.0.3"
+version = "2.0.0"
 edition = "2021"
 authors = ["isolume <nerd@isolu.me>"]
 license = "MIT"
@@ -8,7 +8,10 @@ repository = "https://github.com/isolume/anilist-push"
 description = "Simple CLI application to fetch AniList notifications and send them over Pushover."
 
 [dependencies]
-reqwest = { version = "0.12.12", features = ["json"] }
-tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros"] }
-anyhow = "1.0.95"
-serde_json = "1.0.138"
+reqwest = { version = "0.12.15", features = ["json"] }
+tokio = { version = "1.44.2", features = ["rt-multi-thread", "macros"] }
+anyhow = "1.0.97"
+serde_json = "1.0.140"
+confy = "0.6.1"
+clap = { version = "4.5.1", features = ["derive"] }
+serde = { version = "1.0.219", features = ["derive"] }
