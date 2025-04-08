@@ -33,7 +33,6 @@ async fn main() -> Result<(), Error> {
     let args = Args::parse();
     let mut config = load_config()?;
 
-    // Update config if tokens are provided
     if let Some(app_token) = args.app_token.clone() {
         config.app_token = app_token;
     }
@@ -47,12 +46,10 @@ async fn main() -> Result<(), Error> {
         config.latest_notification_id = 0;
     }
 
-    // Save config if it was modified
     if args.app_token.is_some() || args.user_token.is_some() || args.anilist_token.is_some() || args.reset {
         save_config(&config)?;
     }
 
-    // Check if tokens are set
     if config.app_token.is_empty() || config.user_token.is_empty() || config.anilist_token.is_empty() {
         eprintln!("Error: Tokens not set. Please set them using:");
         eprintln!("  --app-token or -a for Pushover App Token");
